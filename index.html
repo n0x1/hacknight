@@ -1,1 +1,36 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Waste Sorting Helper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Waste Sorting Helper</h1>
+        <div class="bins">
+            <div class="bin" id="recycleBin" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="./images/recycling.jpeg">
+            </div>
+            <div class="bin" id="trashBin" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="./images/trash.png">
+            </div>
+            <div class="bin" id="compostBin" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="./images/compost.jpeg" style="width:320px !important;">
+            </div>
+        </div>
+        <div id="response"></div>
+    </div>
+    <div class="waste-item" id="wasteItem">
+        <img id="draggableWasteItem" draggable="true" src="">
+      </div>
+    <div class="gptResponse">
+        <p>jj</p>
+    </div>
+
+</body>
+
+
+</html>
