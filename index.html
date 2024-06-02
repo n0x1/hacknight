@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
+
     <div class="container">
         <h1>Waste Sorting Helper</h1>
-        <div class="bins">
+        <div class="bins" draggable="false">
             <div class="bin" id="recycleBin" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img src="./images/recycling.jpeg">
             </div>
@@ -21,13 +23,20 @@
                 <img src="./images/compost.jpeg" style="width:320px !important;">
             </div>
         </div>
+        <div class="buttons">
+            <div class="unselectable" id="recycleButton">Recycle</div>
+            <div class="unselectable" id="trashButton">Trash</div>
+            <div class="unselectable" id="compostButton">Compost</div>
+        </div>
+        <!-- DEFINE THESE FUNCTIONS ABOVE -->
         <div id="response"></div>
     </div>
-    <div class="waste-item" id="wasteItem">
-        <img id="draggableWasteItem" draggable="true" src="">
-      </div>
-    <div class="gptResponse">
-        <p>jj</p>
+    <div draggable="true" id="wasteItemContainer">
+        <!-- Item is appended here -->
+    </div>
+
+    <div>
+        <p id="response">Sort the waste!</p>
     </div>
 
 </body>

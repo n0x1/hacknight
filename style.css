@@ -2,7 +2,70 @@
 .bins {
     display:flex;
     align-items: center;
-    max-width: 100%;
-    height: auto;
     justify-content: center;
+    overflow:auto;
+}
+.bins img {
+    flex: 1 1 auto; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 100%; /* Limits image width to the container width */
+    height: auto; /* Maintains aspect ratio */
+    margin: 5px; /* Adjust margin as needed */
+}
+.buttons {
+    display:flex;
+    flex-direction:row;
+    justify-content: safe center;
+    align-items: center;
+}
+
+#recycleButton {
+    background-color:#4b99c9;
+    padding:1% 10%;
+    margin: 10px 15px 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.35s ease, color 0.35s ease; 
+}
+#trashButton {
+    background-color:#a0a2a3;
+    padding:1% 10%;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.35s ease, color 0.35s ease; 
+}
+#compostButton {
+    background-color:#56a67a;
+    padding:1% 10%;
+    margin: 10px 10px 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.35s ease, color 0.35s ease; 
+}
+#recycleButton:hover {
+    background: rgba(166, 227, 245, 0.7); 
+        cursor:pointer;
+}
+#trashButton:hover {
+    background: rgba(194, 194, 194, 0.5); 
+    cursor:pointer;
+}
+#compostButton:hover {
+    background: rgba(48, 255, 141, 0.5); 
+    cursor:pointer;
+}
+
+
+#wasteItem {
+    display:block;
+    width:150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
